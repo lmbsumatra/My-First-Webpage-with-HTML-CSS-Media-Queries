@@ -1,17 +1,22 @@
+/* General */
 * {
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
     color: #333;
 }
+
 .container {
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.2rem;
 }
+
+/* Header Section */
 header {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
@@ -19,13 +24,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-
-
 }
+
+/* Navigation Bar */
 .navbar {
     background: #232a34;
     padding: 1.2rem;
 }
+
 .navbar-brand {
     color: #fff;
     font-size: 24px;
@@ -34,6 +40,7 @@ header {
     text-decoration: none;
     letter-spacing: 1px;
 }
+
 .navbar-nav {
     text-align: center;
     padding: 0.8rem 0;
@@ -50,12 +57,16 @@ header {
     padding: 0.4rem 0.1rem;
     letter-spacing: 3px;
     transition: opacity 0.5s ease;
-
-
 }
 .navbar-nav a:hover {
-    color: coral;
+    color: rgb(83, 105, 139);
 }
+
+.navbar-menu {
+    display: none;
+}
+
+/* Hero Section */
 .banner {
     flex: 1;
     display: flex;
@@ -64,19 +75,20 @@ header {
     text-align: center;
     color: #fff;
 }
+
 .banner-title {
     font-size: 3rem;
     line-height: 1.2;
-
 }
+
 .banner p {
     padding: 3rem 0 2rem 0;
     font-size: 1.2rem;
     text-transform: capitalize;
     font-weight: 300;
     word-spacing: 2px;
-
 }
+
 .banner form {
     background: #fff;
     border-radius: 2rem;
@@ -84,14 +96,15 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
 .search-input {
     font-size: 1.1rem;
     width: 100%;
     outline: 0;
     padding: 0.6rem 0;
     border: none;
-
 }
+
 .search-btn {
     width: 40px;
     font-size: 1.1rem;
@@ -100,6 +113,8 @@ header {
     outline: 0;
     cursor: pointer;
 }
+
+/* Image Gallery Section */
 .cont {
     display: flex;
     flex-direction: column;
@@ -107,54 +122,90 @@ header {
     align-items: center;
     text-align: center;
     margin: 60px 20px 0 20px;
-
-
 }
+
 .cont .heading {
     width: 40%;
     padding-bottom: 50px;
-
 }
+
 .cont .heading h3 {
     font-size: 3em;
     font-weight: bolder;
     color: #333;
     padding-bottom: 10px;
-
 }
+
 .cont .heading h3 span {
     font-weight: 100;
 }
+
 .cont .box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .cont .box .column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 32.5%;
     
 }
-.cont .box .column img {
+
+.cont .box .column .img-card {
     width: 100%;
-    padding-bottom: 15px;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.10) 0px 1px 2px;
+    margin: 15px 0;
 }
+
+.cont .box .column .img-card:hover {
+    box-shadow: rgba(66, 66, 116, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.cont .img-card-desc {
+    padding: 0px 10px 10px 10px;
+    text-align: left;
+    color: #333;
+}
+
+.cont .img-card-desc .actions {
+    float: right;
+}
+
+.cont .img-card-desc .actions i {
+    padding: 5px 7px;
+    font-size: 25px;
+    color: #d8d8d8;
+}
+
+.cont .img-card-desc .actions i:hover {
+    color: #0d1a31;
+}
+
+.cont .box .column img {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+}
+
+/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
     margin-top: 150px;
-
 }
+
 .social-links {
     display: flex;
     justify-content: center;
     margin-bottom: 1.4rem;
 }
+
 .social-links a {
     border: 2px solid #fff;
     color: #fff;
@@ -183,7 +234,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -191,13 +241,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-
-
-
     }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -207,9 +251,19 @@ footer {
     .cont .box .column{
         width: 100%;
     }
+    .navbar-nav {
+        display: none;
+    }
+    .navbar-menu {
+        display: flex;
+        float: right;
+    }
+    .navbar-menu i{
+        color: #fff;
 
-
+    }
 }
+
 @media screen and (max-width: 600px) {
     .cont .heading {
         width: 100%;
@@ -217,6 +271,5 @@ footer {
     .cont .heading h3{
         font-size: 1em;
     }
-
-
 }
+
