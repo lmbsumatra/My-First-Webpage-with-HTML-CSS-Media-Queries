@@ -380,7 +380,8 @@ footer {
     display: block;
 }
 
-input[type=text], input[type=password] {
+.log-in-elements input[type=text],
+.log-in-elements input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -574,6 +575,27 @@ input[type=text], input[type=password] {
     }
     .info-icon{
         text-align: center;
+    }
+
+    .log-in-cont {
+        display: block;
+    }
+
+    .log-in-elements {
+        width: auto;
+        margin: 20px;
+    }
+    
+    .log-in-img {
+        width: auto;
+        line-height: 0;
+    }
+    header {
+        min-height: 1vh;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
     }
 }
 
