@@ -2,18 +2,63 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
     color: #333;
+    background-color: #eeeeee;
 }
 
 .container {
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.2rem;
+}
+
+
+.container2 {
+    margin: 64px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+.btn:hover {
+    background-color: #dfdfdf;
+    box-shadow: rgba(66, 66, 116, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+.btn > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color:#232a34;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.btn > a:hover {
+    font-weight: bolder;
+    color:#232a34;
+}
+
+.btn-mob a{
+    display: none;
+}
+
+.section-title {
+    text-transform: uppercase;
+    color:#6a7786;
 }
 
 /* Header Section */
@@ -47,7 +92,7 @@ header {
 
 }
 
-.navbar-nav a{
+.navbar-nav > a, .btn-mob {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
@@ -149,8 +194,7 @@ header {
 .cont .box .column {
     display: flex;
     flex-direction: column;
-    width: 32.5%;
-    
+    width: 32.5%;  
 }
 
 .cont .box .column .img-card {
@@ -158,6 +202,7 @@ header {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.10) 0px 1px 2px;
     margin: 15px 0;
+    background-color: #fff;
 }
 
 .cont .box .column .img-card:hover {
@@ -191,6 +236,91 @@ header {
     object-fit: cover;
 }
 
+/* About us Section */
+#about-us-section > div {
+    margin: 32px;
+}
+
+#about-us-section .info{
+    border: 1px solid #0d1a31;
+    border-radius: 5px;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+#about-us-section .info-icon {
+    font-size: 50px;
+    padding: auto 30px;
+}
+
+.info-desc, .info-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info-desc{
+    width: 65%;
+}
+
+.info-icon {
+    width: 20%;
+    text-align: center;
+}
+
+#about-us-section .info-desc {
+    padding: 25px;
+}
+
+/* Join us Section */
+.join-us-cont {
+    background-color: #ffffff;
+    margin: 32px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.join-us-elems {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.join-us-cont-desc {
+    width: 50%;
+}
+
+.join-us-cont-img {
+    margin-right: 50px;
+    height: 100%;
+    width: 38%;
+    line-height: 0;
+}
+
+.join-us-cont-img img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    margin-right: 50px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.join-us-cont-desc p,
+.join-us-cont-desc h1,
+.join-us-cont-desc div {
+    margin: 32px 0px;
+}
+
+.join-us-elems > .btn {
+    padding: 5px 20px;
+    background-color: #232a34;
+}
+
+.join-us-elems > .btn a {
+    color: #fff;
+}
+
 /* Footer Section */
 footer {
     background-color: #333;
@@ -220,6 +350,95 @@ footer {
     margin: 0 0.3rem;
 }
 
+/* Log in Page */
+.log-in-cont {
+    background-color: #fff;
+    width: 80%;
+    margin: 32px auto;
+    overflow: hidden;
+    height: 70%;
+    display: flex;
+    border-radius: 15px;
+}
+
+
+.log-in-elements {
+    width: 60%;
+    margin: 20px;
+}
+
+.log-in-elements > * {
+    margin: 20px 0px;
+}
+
+.log-in-img {
+    width: 40%;
+    line-height: 0;
+}
+
+.log-in-elements > * {
+    display: block;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  label[for="un"], label[for="pw"] {
+    font-size: 12px;
+    opacity: 50%;
+  }
+
+  .log-in-img img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .login-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+    color: #333;
+}
+
+.login-links a {
+    border: 2px solid #333;
+    color: #333;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.login-links a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.login-btn {
+    background-color: #384f77;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.login-btn:hover {
+    box-shadow: #6a7786 0px 0px 10px;
+}
+
 @media screen and (min-width: 600px) {
     .navbar-nav a {
         padding-right: 1.2rem;
@@ -245,6 +464,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .container2 {
+        margin: 64px 32px;
+    }
+
     .cont .box {
         flex-direction: column;
     }
@@ -289,6 +512,68 @@ footer {
     }
     #menu-toggle:checked + .menu-button-container{
         color: #384f77;
+    }
+    .btn-mob {
+        display: block;
+    }
+    .btn-mob a{
+        text-decoration: none;
+    }
+
+    .btn-desk {
+        display: none;
+    }
+
+    .join-us-elems {
+        width: auto;
+        height: 100%;
+        display: block;
+    }
+
+    .join-us-cont {
+        width: 90%;
+        margin: 32px auto;
+    }
+
+    .join-us-cont-img {
+        margin-right: 0px;
+    }
+
+    .join-us-cont-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin-right: 50px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .join-us-cont-desc {
+        text-align: center;
+    }
+
+    .join-us-cont-desc p,
+    .join-us-cont-desc h1,
+    .join-us-cont-desc div {
+        margin: 32px;
+    }
+
+    #about-us-section .info{
+        display: block;
+        width: 90%;
+        padding: 0;
+    }
+
+    .info-icon {
+        width: 100%;
+        padding: 10pxs;
+        margin: 0;
+    }
+
+    #about-us-section .info-desc {
+        width: auto;
+    }
+    .info-icon{
+        text-align: center;
     }
 }
 
