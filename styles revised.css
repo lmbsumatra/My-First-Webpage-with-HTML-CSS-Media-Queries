@@ -71,6 +71,14 @@ header {
     justify-content: stretch;
 }
 
+header.log-in-page {
+    min-height: 1vh;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
 /* Navigation Bar */
 .navbar {
     background: #232a34;
@@ -589,13 +597,6 @@ footer {
     .log-in-img {
         width: auto;
         line-height: 0;
-    }
-    header {
-        min-height: 1vh;
-        background: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
     }
 }
 
