@@ -2,6 +2,8 @@
 [SA::WD]
 
 Welcome to my first webpage! This project is a static website built with HTML and CSS' media queries.
+![image](https://github.com/lmbsumatra/My-First-Webpage-with-HTML-CSS-Media-Queries/assets/122442812/2e9259a7-3835-4064-a2f6-7eae4f89c3b5)
+
 
 ## Table of Contents
 
